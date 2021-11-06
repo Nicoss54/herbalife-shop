@@ -1,4 +1,10 @@
 {
+  "eslint.workingDirectories": [
+    "."
+  ],
+  "prettier.configPath": ".prettierrc.json",
+  "prettier.prettierPath": "node_modules/prettier",
+  "prettier.ignorePath": ".prettierignore",
   "cSpell.words": [
     "herbalife"
   ]
