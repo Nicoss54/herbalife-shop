@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": [],
+      "label": "npm: start",
+      "detail": "ng serve"
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: build",
+      "detail": "ng build --configuration production"
+    },
+    {
+      "type": "npm",
+      "script": "deploy",
+      "problemMatcher": [],
+      "label": "npm: deploy",
+      "detail": "firebase deploy"
+    },
+    {
+      "type": "npm",
+      "script": "build-and-deploy",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: build-and-deploy",
+      "detail": "npm run build && npm run deploy"
+    },
+    {
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": [],
+      "label": "npm: lint",
+      "detail": "ng lint"
+    }
+  ]
+}
