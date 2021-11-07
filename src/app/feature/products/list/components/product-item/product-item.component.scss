@@ -1,5 +1,13 @@
 :host {
   width: 30%;
+
+  @media screen and (max-width: 380px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 812px) {
+    width: 40%;
+  }
 }
 
 .product-cart-item {

@@ -17,5 +17,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    /** This is the responsive code for mobile screen (x-small screen) **/
+    @media screen and (max-width: 380px) {
+      justify-content: inherit;
+      flex-wrap: inherit;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

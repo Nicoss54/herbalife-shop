@@ -8,7 +8,7 @@ interface IProduct {
   name: string;
   quantity: number;
   photo: string;
-  type: TypeProduct;
+  types: Array<TypeProduct>;
   price: number;
 }
 
