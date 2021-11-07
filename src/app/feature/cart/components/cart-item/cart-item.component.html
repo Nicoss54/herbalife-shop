@@ -1,0 +1,13 @@
+<form class="cart-item" [formGroup]="cartItemForm" novalidate>
+  <span class="cart_item__product-name">{{ cartItemForm.value.name }}</span>
+  <span>
+    <mat-form-field appearance="outline">
+      <mat-label>Quantité</mat-label>
+      <input type="number" matInput formControlName="quantity" [min]="1" />
+    </mat-form-field>
+  </span>
+  <span class="cart__item__product-total"> {{cartItemForm.value.total }} EUR </span>
+  <span (click)="removeItem()" class="cart-item__product-icon-remove">
+    <mat-icon>delete</mat-icon>
+  </span>
+</form>

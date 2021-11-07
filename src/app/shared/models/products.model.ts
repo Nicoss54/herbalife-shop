@@ -10,6 +10,8 @@ interface IProduct {
   photo: string;
   types: Array<TypeProduct>;
   price: number;
+  isInCart?: boolean;
+  total?: number;
 }
 
 export enum TypeProduct {

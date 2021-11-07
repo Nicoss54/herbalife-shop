@@ -8,6 +8,11 @@ const APP_ROUTES: Routes = [
     loadChildren: async () =>
       (await import('./feature/products/products.module')).ProductsModule,
   },
+  {
+    path: 'cart',
+    loadChildren: async () =>
+      (await import('./feature/cart/cart.module')).CartModule,
+  },
 ];
 
 @NgModule({

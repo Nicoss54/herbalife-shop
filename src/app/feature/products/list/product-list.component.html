@@ -3,6 +3,7 @@
     <herbalife-filter-navigation></herbalife-filter-navigation>
   </section>
   <section class="herbalife-list__products">
-    <herbalife-product-item *ngFor="let product of products$ |async" [product]="product"></herbalife-product-item>
+    <herbalife-product-item *ngFor="let product of products$ |async" [product]="product" (addToCart)="addToCart($event)"
+                            (removeFromCart)="removeFromCart($event)"></herbalife-product-item>
   </section>
 </article>

@@ -15,11 +15,11 @@
     height: calc(100% - 50px);
     overflow: auto;
     display: flex;
-    justify-content: space-between;
+    gap: 5% 2rem;
     flex-wrap: wrap;
 
     /** This is the responsive code for mobile screen (x-small screen) **/
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width: 500px) {
       justify-content: inherit;
       flex-wrap: inherit;
       flex-direction: column;

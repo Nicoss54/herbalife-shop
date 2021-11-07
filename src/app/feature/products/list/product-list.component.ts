@@ -1,8 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '@herbalife/core/providers/service/user.service';
 import { ProductsService } from '@herbalife/feature/products/providers/products.service';
 import { Product, TypeProduct } from '@herbalife/shared/models/products.model';
-import { filter, from, map, Observable, switchMap, toArray } from 'rxjs';
+import {
+  combineLatest,
+  filter,
+  from,
+  map,
+  Observable,
+  switchMap,
+  toArray,
+} from 'rxjs';
 
 @Component({
   selector: 'herbalife-product-list',
@@ -14,22 +23,42 @@ export class ProductListComponent implements OnInit {
   constructor(
     private readonly productsService: ProductsService,
     private readonly route: ActivatedRoute,
-    private readonly router: Router
+    private readonly router: Router,
+    private readonly userService: UserService
   ) {}
 
   ngOnInit(): void {
     this.router.navigate(['products', 'list'], {
       queryParams: { type: 'all' },
     });
-    this.products$ = this.route.queryParamMap.pipe(
-      map(params => params.get('type') as TypeProduct),
-      switchMap(type =>
-        this.productsService.getAllProducts().pipe(
-          switchMap(products => from(products)),
-          filter(({ types }) => types.includes(type)),
+
+    const routeQueryParams$ = this.route.queryParamMap.pipe(
+      map(params => params.get('type') as TypeProduct)
+    );
+    const products$ = this.productsService
+      .getAllProducts()
+      .pipe(switchMap(products => from(products)));
+    const cart$ = this.userService.cart$;
+
+    this.products$ = combineLatest([routeQueryParams$, cart$]).pipe(
+      switchMap(([type, cart]) =>
+        products$.pipe(
+          filter(product => product.types.includes(type)),
+          map(product => ({
+            ...product,
+            isInCart: !!cart.find(cartProduct => cartProduct.id === product.id),
+          })),
           toArray()
         )
       )
     );
+  }
+
+  addToCart(product: Product): void {
+    this.userService.addToCart(product);
+  }
+
+  removeFromCart(product: Product): void {
+    this.userService.removeCart(product.id);
   }
 }
