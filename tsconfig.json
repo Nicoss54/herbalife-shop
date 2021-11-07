@@ -1,10 +1,11 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -20,7 +21,18 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@herbalife/core/*": [
+        "src/app/core/*"
+      ],
+      "@herbalife/feature/*": [
+        "src/app/feature/*"
+      ],
+      "@herbalife/shared/*": [
+        "src/app/shared/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

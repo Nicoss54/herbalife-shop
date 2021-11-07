@@ -1,0 +1,6 @@
+<section class="navigation-menu">
+  <span class="navigation-menu__item" *ngFor="let menuItem of typeProducts |async" [routerLink]="['']"
+        [queryParams]="{ type: menuItem.id }" routerLinkActive="item-selected">
+    {{ menuItem.name }}
+  </span>
+</section>
