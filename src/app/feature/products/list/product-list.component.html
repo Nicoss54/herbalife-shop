@@ -1,0 +1,8 @@
+<article class="herbalife-list">
+  <section class="herbalife-list__filter-navigation">
+    <herbalife-filter-navigation></herbalife-filter-navigation>
+  </section>
+  <section class="herbalife-list__products">
+    <herbalife-product-item *ngFor="let product of products$ |async" [product]="product"></herbalife-product-item>
+  </section>
+</article>

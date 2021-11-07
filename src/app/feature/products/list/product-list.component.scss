@@ -1,0 +1,21 @@
+.herbalife-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__filter-navigation {
+    width: 100%;
+    height: fit-content;
+  }
+
+  &__products {
+    padding: 2rem 2rem;
+    box-sizing: border-box;
+    height: calc(100% - 50px);
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
