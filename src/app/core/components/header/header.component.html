@@ -1,4 +1,6 @@
 <section class="herbalife-header">
   <img src="assets/images/herbalife-logo.png" height="100px" alt="logo herbalife" />
-  <span class="herbalife-header__title-application">Herbalife shop</span>
+  <mat-icon class="herbalife-header__icon-cart" [matBadge]="cartItemsNumber$ |async" matBadgeColor="warn"
+            [routerLink]="['cart']">shopping_cart
+  </mat-icon>
 </section>

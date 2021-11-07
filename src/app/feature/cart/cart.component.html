@@ -1,0 +1,13 @@
+<article class="user-cart">
+  <button mat-raised-button color="primary" type="button" class="user-cart__back-button" routerLink="/products">
+    <mat-icon>arrow_back</mat-icon>
+    Retour à la liste des produits
+  </button>
+  <section class="user-cart__list">
+    <span class="user-cart__list__total-cart">total panier: {{ totalCart$ |async }} EUR </span>
+    <div class="user-cart__list__item" *ngFor="let productForm of cartForm.controls; let i = index">
+      <herbalife-cart-item [formControl]="productForm" (removeItemFromCart)="removeItemFromCart(i)">
+      </herbalife-cart-item>
+    </div>
+  </section>
+</article>

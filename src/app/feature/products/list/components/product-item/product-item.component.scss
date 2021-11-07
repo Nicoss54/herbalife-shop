@@ -1,7 +1,7 @@
 :host {
   width: 30%;
 
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 500px) {
     width: 100%;
   }
 
@@ -12,5 +12,4 @@
 
 .product-cart-item {
   max-width: 100%;
-  margin-bottom: 2rem;
 }
