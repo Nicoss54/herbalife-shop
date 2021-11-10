@@ -155,14 +155,6 @@ export const PRODUCTS: Array<Product> = [
     price: 53,
   },
   {
-    id: 'probiotic_max',
-    name: 'Priobotic Max',
-    quantity: 1,
-    photo: 'probiotic_max.png',
-    types: [TypeProduct.ALL, TypeProduct.INTERNAL_NUTRITION],
-    price: 54.5,
-  },
-  {
     id: 'high_protein_iced_coffee',
     name: 'High Protein Iced Coffee',
     quantity: 1,
@@ -172,7 +164,7 @@ export const PRODUCTS: Array<Product> = [
   },
   {
     id: 'herbalifeline_max',
-    name: 'Thé 50g',
+    name: 'Herbalifeline Max',
     quantity: 1,
     photo: 'herbalifeline_max.png',
     types: [TypeProduct.ALL, TypeProduct.INTERNAL_NUTRITION],
@@ -185,14 +177,6 @@ export const PRODUCTS: Array<Product> = [
     photo: 'beta_hurt.png',
     types: [TypeProduct.ALL, TypeProduct.INTERNAL_NUTRITION],
     price: 48.5,
-  },
-  {
-    id: 'fiber_supplements',
-    name: 'Compléments Fibres',
-    quantity: 1,
-    photo: 'high_protein_iced_coffee.png',
-    types: [TypeProduct.ALL, TypeProduct.INTERNAL_NUTRITION],
-    price: 22.5,
   },
   {
     id: 'complete_thermo',
@@ -220,7 +204,7 @@ export const PRODUCTS: Array<Product> = [
   },
   {
     id: 'formula_3',
-    name: 'Beta Heart',
+    name: 'Formule 3',
     quantity: 1,
     photo: 'formula_3.png',
     types: [TypeProduct.ALL, TypeProduct.INTERNAL_NUTRITION],
@@ -444,7 +428,7 @@ export const PRODUCTS: Array<Product> = [
   },
   {
     id: 'achieve_h24',
-    name: 'Formula 1 Sport',
+    name: 'Achieve H24',
     quantity: 1,
     photo: 'achieve_h24.png',
     types: [TypeProduct.ALL, TypeProduct.SPORT],
