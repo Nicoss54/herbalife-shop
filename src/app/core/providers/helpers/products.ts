@@ -204,7 +204,7 @@ export const PRODUCTS: Array<Product> = [
   },
   {
     id: 'formula_3',
-    name: 'Formule 3',
+    name: 'Formula 3',
     quantity: 1,
     photo: 'formula_3.png',
     types: [TypeProduct.ALL, TypeProduct.INTERNAL_NUTRITION],
